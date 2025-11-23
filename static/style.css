@@ -1,0 +1,208 @@
+/* 全体レイアウト */
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Meiryo", sans-serif;
+    background: #f1e8ff;
+    color: #333;
+}
+
+.page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+/* ヘッダー */
+.header {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 1.3rem;
+    line-height: 1.4;
+}
+
+.credit {
+    margin-top: 4px;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+/* メインパネル */
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* PC幅（横並び） */
+@media (min-width: 900px) {
+    .main {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .panel-form {
+        flex: 0 0 320px;
+    }
+    .panel-result {
+        flex: 1;
+    }
+}
+
+.panel {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    padding: 10px 12px;
+}
+
+.panel h2 {
+    margin-top: 0;
+    font-size: 1.1rem;
+    border-left: 4px solid #b58cff;
+    padding-left: 6px;
+}
+
+/* フォーム */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.form-row label {
+    font-size: 0.9rem;
+}
+
+.form-row input,
+.form-row select {
+    font-size: 1rem;
+    padding: 4px 6px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.btn-primary {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 999px;
+    background: #b58cff;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    opacity: 0.9;
+}
+
+/* メッセージ */
+.message {
+    margin-top: 8px;
+    padding: 6px 8px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+}
+
+.message.error {
+    background: #ffe0e0;
+    color: #b00020;
+}
+
+.message.info {
+    background: #e4f4ff;
+    color: #004a80;
+}
+
+/* 結果 */
+.no-result {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.solution-block {
+    border-bottom: 1px solid #ddd;
+    padding: 6px 0;
+}
+
+.solution-block:last-child {
+    border-bottom: none;
+}
+
+.solution-header {
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.solution-header .meta {
+    font-weight: normal;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.track-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.track-item {
+    margin-bottom: 2px;
+}
+
+.track-main {
+    font-size: 0.95rem;
+}
+
+.track-main .point {
+    font-weight: bold;
+    margin-right: 4px;
+}
+
+.track-main .detail {
+    font-size: 0.85rem;
+    color: #555;
+}
+
+.variants {
+    font-size: 0.8rem;
+    margin-left: 8px;
+    margin-top: 2px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 1px 4px;
+    border-radius: 999px;
+    border: 1px solid #b58cff;
+    margin: 1px 0;
+}
+
+.sep {
+    margin: 0 2px;
+    color: #888;
+}
+
+/* スマホ向け微調整 */
+@media (max-width: 599px) {
+    .header h1 {
+        font-size: 1.05rem;
+    }
+    .panel {
+        padding: 8px 10px;
+    }
+}
+.counter {
+    margin-top: 2px;
+    font-size: 0.8rem;
+    color: #444;
+}
