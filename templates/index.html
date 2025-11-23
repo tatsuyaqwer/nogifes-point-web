@@ -9,15 +9,15 @@
 <body>
 <div class="page">
     <header class="header">
-    <h1>乃木坂46リズムフェスティバル<br>ポイント調整用計算ツール（Web版）</h1>
-    <div class="credit">制作者「たつや。」 @fes_calculation</div>
-    <div class="counter">
-        本日のアクセス: {{ today_count or 0 }}　／　累計: {{ total_count or 0 }}
-    </div>
-</header>
-
+        <h1>乃木坂46リズムフェスティバル<br>ポイント調整用計算ツール（Web版）</h1>
+        <div class="credit">制作者「たつや。」 @fes_calculation</div>
+        <div class="counter">
+            本日のアクセス: {{ today_count or 0 }}　／　累計: {{ total_count or 0 }}
+        </div>
+    </header>
 
     <main class="main">
+        <!-- 条件入力パネル -->
         <section class="panel panel-form">
             <h2>条件入力</h2>
             <form method="post" class="form">
@@ -40,9 +40,15 @@
                 </div>
 
                 <div class="form-row">
-                    <label for="target">残りポイント数：</label>
-                    <input type="number" name="target" min="1" max="20000" value="" placeholder="例：5000">
-                           value="{{ target_value }}">
+                    <label for="target">残りポイント数</label>
+                    <input
+                        type="number"
+                        name="target"
+                        id="target"
+                        min="1"
+                        max="20000"
+                        value="{{ target_value }}"
+                        placeholder="例：5000">
                 </div>
 
                 <div class="form-row">
@@ -58,6 +64,7 @@
             {% endif %}
         </section>
 
+        <!-- 結果表示パネル -->
         <section class="panel panel-result">
             <h2>結果</h2>
 
