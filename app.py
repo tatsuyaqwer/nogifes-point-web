@@ -355,7 +355,7 @@ def index():
 
         # 入力チェック
         if not target_str:
-            error = "目的の合計を入力してください。"
+            error = "残りポイント数を入力してください。"
         else:
             try:
                 target = int(target_str)
